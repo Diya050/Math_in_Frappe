@@ -5,13 +5,13 @@ This repository is about rendering Math formula and Mermaid flowcharts in Frappe
 
 - Open terminal.
 - Go to `Utils` directory.
-- 
+ 
 ```bash
 cd frappe-bench/apps/frappe/frappe/utils
 vi data.py
 ```
 - Add the following to `data.py`:
-- 
+
 ```python
     extras = {
         "fenced-code-blocks": None,

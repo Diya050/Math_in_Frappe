@@ -84,7 +84,6 @@ graph LR;
     G((Object Files)) --> H{{Linker}};
     H --> I(Executable File);
 ```
-Note: Mermaid syntax starts with ```mermaid` and ends with ```.
 
 - Output:
 

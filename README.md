@@ -88,4 +88,4 @@ graph LR;
 ```
 - Output:
 
-![output](image.png)
+![output](image1.png)

@@ -4,7 +4,7 @@ This repository is about rendering Math formula and Mermaid flowcharts in Frappe
 ## Steps To Follow:
 
 - Open terminal.
-- Go to `Utils` directory.
+- Go to `utils` directory.
  
 ```bash
 cd frappe-bench/apps/frappe/frappe/utils

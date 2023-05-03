@@ -1,18 +1,17 @@
-## Math and Flowcharts in Frappe
-This repository is about rendering maths formula and mermaid flowcharts in frappe/erpnext webpages through markdown.
+# Math and Flowcharts in Frappe
+This repository is about rendering Math formula and Mermaid flowcharts in Frappe/Erpnext webpages through Markdown.
 
 ## Steps To Follow:
 
 - Open terminal.
 - Go to `Utils` directory.
+- 
 ```bash
 cd frappe-bench/apps/frappe/frappe/utils
-```
-- Edit `data.py` file.
-```bash
 vi data.py
 ```
 - Add the following to `data.py`:
+- 
 ```python
     extras = {
         "fenced-code-blocks": None,
@@ -27,3 +26,46 @@ vi data.py
          "code-friendly": None,
     }
 ```
+
+- Now go to `templates` directory.
+
+```bash
+cd frappe-bench/apps/frappe/frappe/templates
+vi web.html
+```
+
+- Add the following code to `web.html`:
+
+```html
+<script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="module" defer>
+      import mermaid from
+'https://cdn.jsdelivr.net/npm/mermaid@9/dist/mermaid.esm.min.mjs';
+      mermaid.initialize({
+        securityLevel: 'loose',
+        startOnLoad: true
+      });
+      let observer = new MutationObserver(mutations => {
+        for(let mutation of mutations) {
+          mutation.target.style.visibility = "visible";
+        }
+      });
+      document.querySelectorAll("pre.mermaid-pre div.mermaid").forEach(item => {
+        observer.observe(item, {
+          attributes: true,
+          attributeFilter: ['data-processed'] });
+      });
+    </script>
+```
+- Save all the changes and create a webpage in Frappe.
+- Through Markdown, using LaTeX syntax, render Math formula and make Mermaid flowcharts easily. 
+- For example,
+
+```markdown
+
+```
+- Output:
+
+![output](image.png)

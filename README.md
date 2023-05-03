@@ -83,8 +83,8 @@ graph LR;
     F --> G[Object File];
     G((Object Files)) --> H{{Linker}};
     H --> I(Executable File);
-
 ```
+
 ```
 - Output:
 

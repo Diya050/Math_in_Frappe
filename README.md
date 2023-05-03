@@ -88,4 +88,4 @@ graph LR;
 ```
 - Output:
 
-![output](https://github.com/Diya050/Math_in_Frappe/blob/main/image1.png)
+!(output)[https://github.com/Diya050/Math_in_Frappe/blob/main/image1.png]
